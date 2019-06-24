@@ -1,5 +1,6 @@
 rails new -d postgresql CV_Bonnard
 cd CV_Bonnard
+>> modife Gemfil
 bundle install
 rails db:create
 rails g devise user
