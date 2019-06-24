@@ -1,0 +1,15 @@
+rails new -d postgresql CV_Bonnard
+cd CV_Bonnard
+bundle install
+rails db:create
+rails g devise user
+rails generate devise:views
+rails generate scaffold Home title:string website:string description:text
+rails generate scaffold Experience businessName:string work:string date:string website:string description:text
+rails generate scaffold Training title:string trainingCenter:string date:string website:string description:text
+rails generate scaffold Developpement title:string developmentDate:string website:string description:text
+rails generate model Contact
+rails generate controller contacts show
+rails generate devise:install
+rails active_storage:install
+rails db:migrate
