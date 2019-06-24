@@ -3,6 +3,9 @@ cd CV_Bonnard
 >> modife Gemfil
 bundle install
 rails db:create
+rails generate devise:install
+>> modife config/environments/development.rb 
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 rails g devise user
 rails generate devise:views
 rails generate scaffold Home title:string website:string description:text
