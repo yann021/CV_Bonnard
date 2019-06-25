@@ -1,0 +1,2 @@
+class ExperienceAvatarsController < ApplicationController
+end
