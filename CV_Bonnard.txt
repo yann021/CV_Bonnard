@@ -1,10 +1,10 @@
 rails new -d postgresql CV_Bonnard
 cd CV_Bonnard
->> modife Gemfil
+>> modif Gemfil
 bundle install
 rails db:create
 rails generate devise:install
->> modife config/environments/development.rb 
+>> modif config/environments/development.rb 
     config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 rails g devise user
 rails generate devise:views
@@ -24,3 +24,10 @@ rails g controller developementsAvatars
 >> modife db/migrate/20190624213434_devise_create_users.rb
     add field for user
 rails db:migrate
+>> modif app/model/user.rb
+>> modif app/model/home.rb
+>> modif app/model/experience.rb
+>> modif app/model/training.rb
+>> modif app/model/developement.rb
+    has_many belonge_to & active storage
+    

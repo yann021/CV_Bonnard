@@ -1,2 +1,0 @@
-class DevelopementsAvatarsController < ApplicationController
-end
