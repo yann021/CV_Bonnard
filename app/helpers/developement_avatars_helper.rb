@@ -1,0 +1,2 @@
+module DevelopementAvatarsHelper
+end
