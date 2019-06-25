@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contacts/show'
   resources :developpements
   resources :trainings
   resources :experiences
