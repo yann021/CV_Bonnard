@@ -1,0 +1,2 @@
+class HomeAvatarsController < ApplicationController
+end

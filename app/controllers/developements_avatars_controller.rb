@@ -1,0 +1,2 @@
+class DevelopementsAvatarsController < ApplicationController
+end

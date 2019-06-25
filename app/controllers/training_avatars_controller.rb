@@ -1,0 +1,2 @@
+class TrainingAvatarsController < ApplicationController
+end
