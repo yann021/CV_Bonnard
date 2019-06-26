@@ -12,7 +12,7 @@ rails generate scaffold Home title:string website:string description:text
 rails generate scaffold Experience businessName:string work:string date:string website:string description:text
 rails generate scaffold Training title:string trainingCenter:string date:string website:string description:text
 rails generate scaffold Developpement title:string developmentDate:string website:string description:text type:integer
-rails generate model Contact
+rails generate model Contact email:strig object:string description:text
 rails generate controller contacts show .
 rails active_storage:install
 rails db:migrate
@@ -30,4 +30,7 @@ rails db:migrate
 >> modif app/model/training.rb
 >> modif app/model/developement.rb
     has_many belonge_to & active storage
+>> modif db/seed.rb
+rails db: seed
+
     
