@@ -8,16 +8,14 @@
 
 require 'faker'
 
-#User.destroy_all
-#Home.destroy_all
-#Experience.destroy_all
-#Training.destroy_all
-#Developement.destroy_all
-5.times do |i|
-User.create!(first_name: Faker::Name.first_name, laste_name: Faker::Name.last_name, email: "test#{i}@yopmail.com", password: "123456", current_work: Faker::Job.title, street_name: Faker::Address.street_address, city: Faker::Address.city , phone: Faker::PhoneNumber.phone_number_with_country_code, mail: Faker::Internet.email )
+User.destroy_all
+Home.destroy_all
+Experience.destroy_all
+Training.destroy_all
+Developement.destroy_all
+
+User.create!(first_name: Faker::Name.first_name, laste_name: Faker::Name.last_name, email: "test@yopmail.com", password: "123456", current_work: Faker::Job.title, street_name: Faker::Address.street_address, city: Faker::Address.city , phone: Faker::PhoneNumber.phone_number_with_country_code, mail: Faker::Internet.email )
 puts "User create"
-i += 1
-end
 
 10.times do
   Home.create!(title: Faker::Movies::HarryPotter.book, website: "http://www.bdf.net", description: Faker::Movies::HarryPotter.quote)
@@ -35,6 +33,6 @@ end
 puts "Training create"
 
 10.times do
-  Developement.create!(title: Faker::Movie.quote,  developmentDate: Faker::Date.forward(23), website: "http://www.bdf.net", description: Faker::Movies::VForVendetta.speech)
+  Developement.create!(title: Faker::Movie.quote, developmentDate: Faker::Date.forward(23), website: "http://www.bdf.net", description: Faker::Movies::VForVendetta.speech)
 end
 puts "Developpement create"
