@@ -1,6 +1,6 @@
-class CreateDeveloppements < ActiveRecord::Migration[5.2]
+class CreateDevelopements < ActiveRecord::Migration[5.2]
   def change
-    create_table :developpements do |t|
+    create_table :developements do |t|
       t.string :title
       t.string :developmentDate
       t.string :website

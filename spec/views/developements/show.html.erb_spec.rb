@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "developpements/show", type: :view do
+RSpec.describe "developements/show", type: :view do
   before(:each) do
-    @developpement = assign(:developpement, Developpement.create!(
+    @developement = assign(:developement, Developement.create!(
       :title => "Title",
       :developmentDate => "Development Date",
       :website => "Website",
