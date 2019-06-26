@@ -13,6 +13,7 @@ Home.destroy_all
 Experience.destroy_all
 Training.destroy_all
 Developement.destroy_all
+Contact.destroy_all
 
 User.create!(first_name: Faker::Name.first_name, laste_name: Faker::Name.last_name, email: "test@yopmail.com", password: "123456", current_work: Faker::Job.title, street_name: Faker::Address.street_address, city: Faker::Address.city , phone: Faker::PhoneNumber.phone_number_with_country_code, mail: Faker::Internet.email )
 puts "User create"
@@ -36,3 +37,8 @@ puts "Training create"
   Developement.create!(title: Faker::Movie.quote, developmentDate: Faker::Date.forward(23), website: "http://www.bdf.net", description: Faker::Movies::VForVendetta.speech)
 end
 puts "Developpement create"
+
+10.times do
+  Contact.create!(email: Faker::Movie.quote, object: Faker::Job.title, description: Faker::Movies::VForVendetta.speech)
+end
+puts "Contact create"
