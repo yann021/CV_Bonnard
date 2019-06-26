@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe "developpements/index", type: :view do
+RSpec.describe "developements/index", type: :view do
   before(:each) do
-    assign(:developpements, [
-      Developpement.create!(
+    assign(:developements, [
+      Developement.create!(
         :title => "Title",
         :developmentDate => "Development Date",
         :website => "Website",
         :description => "MyText",
         :type => 2
       ),
-      Developpement.create!(
+      Developement.create!(
         :title => "Title",
         :developmentDate => "Development Date",
         :website => "Website",
@@ -20,7 +20,7 @@ RSpec.describe "developpements/index", type: :view do
     ])
   end
 
-  it "renders a list of developpements" do
+  it "renders a list of developements" do
     render
     assert_select "tr>td", :text => "Title".to_s, :count => 2
     assert_select "tr>td", :text => "Development Date".to_s, :count => 2

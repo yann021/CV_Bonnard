@@ -1,5 +1,5 @@
 class Training < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   #ybo active storage
   has_one_attached :training_avatar

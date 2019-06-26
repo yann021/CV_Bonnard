@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :developpement do
+  factory :developement do
     title { "MyString" }
     developmentDate { "MyString" }
     website { "MyString" }

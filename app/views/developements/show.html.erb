@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @developement.title %>
+</p>
+
+<p>
+  <strong>Developmentdate:</strong>
+  <%= @developement.developmentDate %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @developement.website %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @developement.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @developement.type %>
+</p>
+
+<%= link_to 'Edit', edit_developement_path(@developement) %> |
+<%= link_to 'Back', developements_path %>
