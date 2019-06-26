@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  root to: 'homes#index'
+
+
   resources :developements
   get 'contacts/show'
   resources :trainings
