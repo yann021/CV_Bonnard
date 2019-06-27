@@ -69,6 +69,6 @@ class DevelopementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def developement_params
-      params.require(:developement).permit(:title, :developmentDate, :website, :description, :type)
+      params.require(:developement).permit(:title, :developmentDate, :website, :description, :mtype)
     end
 end

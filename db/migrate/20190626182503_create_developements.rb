@@ -5,7 +5,7 @@ class CreateDevelopements < ActiveRecord::Migration[5.2]
       t.string :developmentDate
       t.string :website
       t.text :description
-      t.integer :type
+      t.integer :mtype
 
       t.timestamps
     end
