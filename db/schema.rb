@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_06_26_182503) do
     t.string "developmentDate"
     t.string "website"
     t.text "description"
-    t.integer "type"
+    t.integer "mtype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,14 +1,15 @@
 class ContactsController < ApplicationController
+  
   def new
-    @contact = contact.new
+    @contact = Contact.new
   end
 
   def create
-    @contact = contact.new(contact_params)
+    @contact = Contact.new(contact_params)
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'contact was successfully created.' }
+        format.html { redirect_to root_path, notice: 'contact was successfully created.' }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }
@@ -20,7 +21,7 @@ class ContactsController < ApplicationController
   private
 
   def set_contact
-    @contact = contact.find(params[:id])
+    @contact = Contact.find(params[:id])
   end
 
   def contact_params

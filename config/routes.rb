@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :developements
 
-  resources :contact, only: [:new, :create]
+  resources :contacts, only: [:new, :create]
 
   resources :trainings
 
