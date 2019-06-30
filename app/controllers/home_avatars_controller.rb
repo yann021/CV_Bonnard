@@ -1,2 +1,0 @@
-class HomeAvatarsController < ApplicationController
-end

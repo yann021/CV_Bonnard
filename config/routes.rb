@@ -3,21 +3,21 @@ Rails.application.routes.draw do
   root to: 'homes#index'
 
   resources :developements do
-    resources :developement_avatars, only: [:create]
+    resources :avadevs, only: [:create]
   end
 
   resources :contacts, only: [:new, :create]
 
   resources :trainings do
-    resources :training_avatars, only: [:create]
+    resources :avatrains, only: [:create]
   end
 
   resources :experiences do
-    resources :experience_avatars, only: [:create]
+    resources :avaexpes, only: [:create]
   end
 
   resources :homes do
-    resources :home_avatars, only: [:create]
+    resources :avahomes, only: [:create]
   end
 
   devise_for :users do
