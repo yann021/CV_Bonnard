@@ -4,7 +4,7 @@
     <br>
     <%= link_to 'New Home', new_home_path %>
     <% @homes.each do |home| %>
-      <h1><%= home.title %></1>
+      <h1><a href=<%= home.website %>><%= home.title %></a></h1>
       <p><td><%= home.description %></p>
       <table>
         <td><%= link_to 'Show', home %></td>
@@ -13,8 +13,3 @@
       </table>
     <% end %>
   </tbody>
-
-
-<br>
-
-<%= link_to 'New Home', new_home_path %>
