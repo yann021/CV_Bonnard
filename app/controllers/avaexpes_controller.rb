@@ -1,0 +1,2 @@
+class AvaexpesController < ApplicationController
+end

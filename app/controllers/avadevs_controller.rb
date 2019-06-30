@@ -1,0 +1,2 @@
+class AvadevsController < ApplicationController
+end

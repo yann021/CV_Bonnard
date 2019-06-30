@@ -1,0 +1,2 @@
+class AvatrainsController < ApplicationController
+end

@@ -1,2 +1,0 @@
-class TrainingAvatarsController < ApplicationController
-end

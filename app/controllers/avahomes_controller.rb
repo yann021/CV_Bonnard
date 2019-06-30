@@ -1,0 +1,2 @@
+class AvahomesController < ApplicationController
+end

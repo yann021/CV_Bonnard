@@ -17,10 +17,10 @@ rails generate controller contacts show .
 rails active_storage:install
 rails db:migrate
 rails g controller avatars 
-rails g controller homeAvatars 
-rails g controller experienceAvatars 
-rails g controller trainingAvatars 
-rails g controller developementsAvatars 
+rails g controller avahomes 
+rails g controller avaexpes
+rails g controller avatrains 
+rails g controller avadevs 
 >> modife db/migrate/20190624213434_devise_create_users.rb
     add field for user
 rails db:migrate
