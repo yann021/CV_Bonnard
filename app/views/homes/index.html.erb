@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
   <tbody>
+    <br>
+    <%= link_to 'New Home', new_home_path %>
     <% @homes.each do |home| %>
       <h1><%= home.title %></1>
       <p><td><%= home.description %></p>
