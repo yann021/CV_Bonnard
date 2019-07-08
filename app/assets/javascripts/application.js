@@ -14,3 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+//= require app.js
+//= require vendor.js
+//= require vendor.min.js
+
