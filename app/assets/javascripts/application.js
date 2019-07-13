@@ -10,13 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
-//= require jquery-ui
-//= require rails-ujs
-//= require activestorage
-//= require_tree .
 
-//= require app.js
+// require activestorage
 //= require vendor.js
-//= require vendor.min.js
+//= require app.js
 
+
+ 
