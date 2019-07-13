@@ -1,23 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Experiences</h1>
+<section id="default" class="component">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col">
+        <h1>Experiences</h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-0 text-right text-md-right">
+    <%= link_to 'Créer une expérience', new_experience_path, class:"btn btn-sm btn-primary" %>
+  </div>
+  <br />
+  <% @experiences.each do |experience| %>  
+  <div class="tab-content" id="component-1">
+    <div class="tab-pane show active" id="component-1-1" role="tabpanel" aria-labelledby="component-1-1">
+      <div class="component-example">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="accordion-group" data-accordion-group>
+                <tbody> 
+                  <h2><a href=<%= experience.website %>><%= experience.businessName %></a></h2>
+                  <h3><%= experience.work %></h3>
+                  <h4><%= experience.date %></h4>
+                  <p><%= experience.description %></p>
+                  <table>
+                    <tr>
+                      <td><%= link_to 'Voir', experience, class:"btn btn-sm btn-primary" %></td>
+                      <td><%= link_to 'Modifier',   edit_experience_path(experience), class:"btn btn-sm btn-primary"  %></td>
+                      <td><%= link_to 'Supprimer',   experience, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-sm btn-primary"  %></td>
+                    </tr>
+                  </table>
+                </tbody>                    
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>  
+  </div>
+  <br />
+  <% end %>
+</section>
 
-  <tbody>
-    <%= link_to 'New Experience', new_experience_path %>
-    <% @experiences.each do |experience| %>
 
-      <h1><a href=<%= experience.website %>><%= experience.businessName %></a></h1>
-      <h2><%= experience.work %></h2>
-      <h3><%= experience.date %></h3>
-      <p><%= experience.description %></p>
-      <table>
-        <tr>
-          <td><%= link_to 'Show', experience %></td>
-          <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
-          <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      </table>
-    <% end %>
-  </tbody>
-
+ 
+  
 
