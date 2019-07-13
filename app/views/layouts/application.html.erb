@@ -5,19 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    
   </head>
-
-  <%= link_to "Connexion", new_user_session_path %>
-  <%= link_to "Acceuil", homes_path %>
-  <%= link_to "Expériences", experiences_path %>
-  <%= link_to "Formation", trainings_path %>
-  <%= link_to "Developement", developements_path %>
-  <%= link_to "Contact", new_contact_path %>
   
-
-  <body>
+  <body class="bg-light">
+    <%= render 'layouts/navbar' %>
     <%= yield %>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  
-
- *= require style.css
  *= require vendor.css
+ *= require style.css
  */
