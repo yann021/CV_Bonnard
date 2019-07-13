@@ -1,20 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Trainings</h1>
-
-<tbody>
-  <%= link_to 'New Training', new_training_path %>
+<section id="default" class="component">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col">
+        <h1>Trainings</h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-0 text-right text-md-right">
+    <%= link_to 'Créer une nouvelle formation', new_training_path, class:"btn btn-sm btn-primary" %>
+  </div>
+  <br />
   <% @trainings.each do |training| %>
-    <h1><a href=<%= training.website %>><%= training.title %></a></h1>
-    <h2><%= training.trainingCenter %></h2>
-    <h3><%= training.date %></h3>
-    <p><%= training.description %></p>
-    <table>
-      <tr>
-        <td><%= link_to 'Show', training %></td>
-        <td><%= link_to 'Edit', edit_training_path(training) %></td>
-        <td><%= link_to 'Destroy', training, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    </table>
+  <div class="tab-content" id="component-1">
+    <div class="tab-pane show active" id="component-1-1" role="tabpanel" aria-labelledby="component-1-1">
+      <div class="component-example">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="accordion-group" data-accordion-group>              
+                <tbody>
+                  <h1><a href=<%= training.website %>><%= training.title %></a></h1>
+                  <h2><%= training.trainingCenter %></h2>
+                  <h3><%= training.date %></h3>
+                  <p><%= training.description %></p>
+                <table>
+                  <tr>
+                    <td><%= link_to 'Voir', training, class:"btn btn-sm btn-primary" %></td>
+                    <td><%= link_to 'Modifier', edit_training_path(training), class:"btn btn-sm btn-primary" %></td>
+                    <td><%= link_to 'Supprimer', training, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-sm btn-primary" %></td>
+                  </tr>
+                </table>
+              </tbody>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+  <br />
   <% end %>
-</tbody>
+</section>
